@@ -1,0 +1,572 @@
+
+.btn-group-xs > .btn, .btn-xs {
+  padding: .40rem .40rem;
+  font-size: .8rem;
+  line-height: .5;
+  border-radius: .2rem;
+}
+.btn-block{
+  margin-bottom: 1rem;
+}
+
+.header-container{
+  text-align: right;
+  background-color:#a4123f;
+  padding: 1rem 0 2.5rem 0;
+}
+
+.header-image{
+  width: 18rem;
+  float: left;
+  padding: 1rem 0 1rem 1rem;
+  margin-left: 2.5rem;
+}
+
+.header-text{
+  display: inline;
+  color: #CCC;
+  position: relative;
+  top: 0.5rem;
+  padding-right: 5rem;
+  text-transform: none;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+  
+}
+
+.homepage-login{
+  margin: 0;
+  margin-left: 3rem;
+  margin-right: 4rem;
+  padding: 3rem;
+}
+
+.navbar-container{
+  text-align: right;
+  padding-left: 43rem;
+}
+
+.navitems{
+    grid-area: navbar;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 13.5rem;
+    text-decoration: none;
+}
+.navbar-dark{
+  color: 	#D3D3D3;
+  text-decoration: none;
+  }
+
+.navbar-red{
+  background-color: #a4123f;
+}
+.navbar-dark:hover{
+  color: whitesmoke;
+  text-decoration: none;
+  
+  }
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 200 px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-y: visible; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.wrapper {
+  padding: 4rem 0 0 0;
+  margin: 0;
+}
+
+.py-3{
+  padding: 0;
+  margin: 0;
+}
+
+.profile-list-item1{
+  background-color: rgba(255, 255, 255, 0.801);
+  padding: 1rem
+}
+
+.profile-list-item2{
+  background-color: rgba(253, 253, 253, 0.5);
+}
+
+.profile-heading{
+  color: rgba(43, 43, 43, 0.897);
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+footer { 
+  background-color: #292929;
+  margin: 0;
+  flex: 0 0 auto;
+  display: flex;
+  color: #ccc;
+  justify-content: center;
+}
+
+
+.table-text {
+  color: green;
+  font-weight: bold;
+}
+body {
+  background: url('./coimbatore-campus.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.body-tabs {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+
+  gap: 4px;
+  grid-auto-flow: column;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h3{
+  font-family: Averia Serif Libre, serif;
+}
+
+.column {
+  float: left;
+  position: relative;
+  height: 50px;
+  width: 50%;
+  margin-left: 350px;
+  margin-bottom: 100px;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  size:10rem;
+  text-align: center;
+  background-color:rgb(248, 248, 185);
+  text-decoration: none;
+  
+}
+.card:hover{
+  box-shadow: 0 4px 8px 0 rgba(10, 10, 10, 1);
+}
+.card a{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color:  #383838;
+  display: block;
+}
+.fa-user-circle,.fa-bookmark,.fa-calendar,.fa-bullhorn,.fa-check-circle,.fa-paper-plane-o,.fa-folder {
+  font-size: 2rem;
+  color: #383838;
+}
+.btn-custom-red .fa-user-circle{
+  font-size: 2rem;
+  color: #CCC;
+}
+.btn-custom-red{
+  color: #CCC;
+  text-decoration: none;
+  background-color: #a4123f;
+}
+
+.btn-custom-red:hover{
+  background-color: #830721d3;
+  color:whitesmoke;
+}
+
+.tabs-container{
+  padding: 2% 3%;
+}
+
+.google-bag{
+  color: black;
+  height: 600px;
+  width: 400px;
+  border-radius: 20px;
+  background-color: whitesmoke;
+  background-blend-mode:exclusion;
+  opacity: 80%;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+.g-signin2{
+  margin-left: 25%;
+  padding: 3rem;
+
+}
+
+
+
+.login-container{
+  padding: 10rem 5rem;
+}
+
+.login-form-text{
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.login-h4{
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+
+.h3-login{
+  padding-bottom: 0.5rem;
+  font-weight: 600;
+  color: #272727;
+
+}
+
+.hr-login{
+  border: 5px dotted;
+  border-width: 0 0 0.5rem 0;
+  width: 4rem;
+  color: #414141;
+}
+
+.signup-buttons{
+  padding: 1rem 0;
+}
+
+.transparent-container{
+  background-color: hsla(5, 46%, 89%, 0.774);
+}
+
+.transparent-container2{
+  background-color: hsla(0, 0%, 100%, 0.89);
+  padding: 5rem;
+}
+.mt-3 .fa-user-circle,.fa-user-plus{
+  text-decoration: none;
+  font-size: inherit;
+} 
+.underlineHover:after {
+  display: block;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  background-color:#292929;
+  content: "";
+  transition: width 0.2s;
+}
+.strike {
+  text-decoration: line-through;
+}
+
+td{
+  border: 1px solid black;
+  padding: 5px;
+}
+
+
+.underlineHover:hover {
+  color: #0d0d0d;
+}
+
+.underlineHover:hover:after{
+  width: 100%;
+}
+.login-button,.submit-button,.reset-button{
+background:#a4123f;
+display:block;
+margin: 20px auto;
+text-align: center;
+border:2px solid #80082c;
+padding:14px 20px;
+width:100px;
+outline:none;
+color:rgb(196, 196, 196);
+border-radius: 24px;
+transition:0.25s;
+cursor : pointer;
+}
+.addup-btn{
+background:rgb(14, 163, 14);
+display:block;
+margin: 20px auto;
+text-align: center;
+border:2px solid rgb(14, 163, 14);
+padding:14px 20px;
+width:150px;
+outline:none;
+color:rgb(196, 196, 196);
+border-radius: 24px;
+transition:0.25s;
+cursor : pointer;
+}
+.addc-btn,.adddl-btn,.addt-btn{
+background:#a4123f;
+display:block;
+margin: 20px auto;
+text-align: center;
+border:2px solid #80082c;
+padding:14px 20px;
+width:150px;
+outline:none;
+color:rgb(196, 196, 196);
+border-radius: 24px;
+transition:0.25s;
+cursor : pointer;
+}
+.lac{
+  background:#a4123f;
+display:block;
+margin: 20px auto;
+text-align: center;
+border:2px solid #80082c;
+padding:14px 20px;
+width: 200px;
+outline:none;
+color:rgb(196, 196, 196);
+border-radius: 24px;
+transition:0.25s;
+cursor : pointer;
+}
+.sort-button,.add-button{
+background:#a4123f;
+display:block;
+margin: 20px auto;
+text-align: center;
+border:2px solid #80082c;
+padding:14px 20px;
+width:100px;
+outline:none;
+color:rgb(196, 196, 196);
+border-radius: 24px;
+transition:0.25s;
+cursor : pointer;
+
+}
+.addup-btn:hover,.lac:hover{
+  background:#096e1a;
+  color: white;
+}
+.sort-button:hover,.add-button:hover,.adddl-btn:hover{
+  background:#80082c;
+  color: white;
+}
+.login-card-header{
+  padding: 2rem 0;
+}
+.login-button:hover,.submit-button:hover,.reset-button:hover,.addc-btn:hover,.addt-btn{
+  background:#80082c;
+  color: white;
+}
+
+.login-image-logo{
+  position: relative;
+  border-radius: 0%;
+  bottom: 2rem;
+  width: 7rem;
+}
+
+.form-control{
+  background: whitesmoke;
+  display:block;
+  margin: 0.8rem auto 3rem auto;
+  text-align: center;
+  border:2px solid #8f5063;
+  padding:14px 10px;
+  width:300px;
+  outline:none;
+  color:rgb(39, 39, 39);
+  border-radius: 24px;
+  transition:0.25s;
+  cursor: pointer;
+}
+.reset-user{
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.form-control-address{
+  background: whitesmoke;
+  display:block;
+  align-content: none;
+  margin: 0.8rem auto 3rem auto;
+  padding:14px 10px;
+  width:350px;
+  height: 10rem;
+  outline:none;
+  border:2px solid #8f5063;
+  border-radius: 5px;
+  color:rgb(39, 39, 39);
+  transition:0.25s;
+  cursor: pointer;
+}
+
+.form-control-address::placeholder{
+  cursor: auto;
+}
+
+.form-control:focus{
+  width:400px;
+  border-color:green;
+}
+.catfil{
+  background: whitesmoke;
+  display:block;
+  margin: 0.8rem auto 3rem auto;
+  text-align: center;
+  border:2px solid #8f5063;
+  padding:14px 10px;
+  width:300px;
+  outline:none;
+  color:rgb(39, 39, 39);
+  border-radius: 24px;
+  transition:0.25s;
+  cursor: pointer;
+}
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+select.form-control:not([size]):not([multiple]) {
+  height: calc(3.25rem + 2px);
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+#todoTable table,tr,th
+{
+  color: black;
+}
+#todoTable table,td
+{
+  border: 1px solid black;
+  color: black;
+}
+.forgotpw-container{
+  text-align: center;
+  padding: 10rem;
+  margin: 0 35%;
+}
+
+.forgot-form{
+  text-align: center;
+}
+
+.navitems img{
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.modal-header{
+  text-align: center;
+  background-color: #a4123f;
+}
+.modal-body{
+  text-align: center;
+}
+
+
+h1, h2 {
+  margin:0;
+  text-align:center;
+  text-transform:uppercase;
+ 
+}
+
+h2 {
+  font-size:20px;
+  text-align:center;
+  padding: 0 0 10px;
+  color:#57635c;
+    
+}
+
+.new-task-container {
+  text-align:center;
+}
+
+
+ul {
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+
+.delete {
+  float:right;
+}
+
+.g-signout{
+  color: rgb(201, 198, 198);
+  font-size: 1rem;
+  font-variant: normal;
+  font-weight: 300;
+}
+
+.g-signout:hover{
+  color: white;
+}
+
+.homescreen-tabs{
+  padding: 3rem;
+}
+
+.hm-tab{
+  height: 15rem;
+}
+
+.hm-tags-fa{
+  padding: 0.4rem;
+  padding-right: 1rem;
+}
