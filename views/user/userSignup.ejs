@@ -1,0 +1,220 @@
+<% include ../partials/header %>
+
+
+<body style="padding: 0;">  
+
+  <div class="container-fluid" style="padding: 0; margin: 0;">
+      <div class="header-container">
+          <img class="header-image" src="https://www.amrita.edu/sites/default/files/logo.png">
+          <!-- https://www.pngitem.com/pimgs/m/539-5392274_amrita-university-logo-hd-png-download.png -->
+          <h1 class="header-text">Faculty Dashboard</h1>
+      </div>
+  </div>
+
+
+
+<section id="usersignUpForm">
+
+  <div class="container mt-5">
+    <div class="row">
+      <!-- <div class="col-md-3">
+        <img src="https://www.pngitem.com/pimgs/m/539-5392274_amrita-university-logo-hd-png-download.png" height="250px" style="margin-top:9px; margin-left:170px;">
+      </div> -->
+      <div class="col-md-6 offset-md-3">
+        <div class="card transparent-container">
+          <div class="card-header text-center login-card-header">
+            <img class="login-image-logo" src="https://www.pngitem.com/pimgs/m/539-5392274_amrita-university-logo-hd-png-download.png">
+            <h4 class="h3-login login-h4">Faculty SignUp</h4>
+            <hr class="hr-login">
+          </div>
+            <div class="card-block">
+
+              <form onsubmit="return validateForm()" class="p-3" action="/auth/user-signUp" method="POST">
+                  
+                <div class="form-group">
+                  <label class="form-control-label">First Name</label>
+                  <input id="fname" type="text" name="firstName" placeholder="First Name" class="form-control" >
+                </div>
+                
+                 <div class="form-group">
+                  <label class="form-control-label">Last Name</label>
+                  <input id="lname" type="text" name="lastName" placeholder="Last Name" class="form-control" >
+                </div>
+                  
+                <div class="form-group">
+                  <label class="form-control-label">Username</label>
+                  <input id="username" type="text" name="username" placeholder="Username" class="form-control" >
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-control-label">Email</label>
+                  <input id="email" type="email"  name="email" placeholder="Email" class="form-control" >
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-control-label">Password</label>
+                  <input id="password" type="password" name="password" placeholder="Password" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label class="form-control-label">Confirm Password</label>
+                  <input id="cpassword" type="password" name="cpassword" placeholder="Confirm Password" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-control-label">Gender</label>
+                  <input id="gender" type="text" name="gender" placeholder="Gender" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-control-label">Address</label>
+                  <input id="address"type="text" name="address" placeholder="Address" class="form-control-address" required>
+                </div>
+                <a href="/auth/user-login"><i class="underlineHover">Already have an account?</i></a>
+                <button id="submit" class="submit-button"type="submit" class="btn btn-warning btn-block">Submit</button>
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+</body>
+<script>
+
+
+function validateForm()
+{
+  var em=document.getElementById("email").value;
+  var pw=document.getElementById("password").value;
+  var cpw=document.getElementById("cpassword").value;
+  var fName=document.getElementById("fname").value;
+  var lName=document.getElementById("lname").value;
+  var userName=document.getElementById("username").value;
+  var gend=document.getElementById("gender").value;
+  if(validateFname(fName)&&validateLname(lName)&&validateEM(em)&&validateUN(userName)&&validatePW(pw)&&validateCPW(cpw,pw)&&validateG(gend))
+  {
+    alert("Account created successfully")
+    return true
+  }
+  else{
+    return false
+  }
+}
+function validateEM(un)
+{
+  if(un.endsWith("@cb.students.amrita.edu"))
+    return true;
+  else if(un=="")
+  {
+    alert("Incorrect Email! \nEmpty Email")
+    return false;
+  }
+  else
+  {
+    alert("Incorrect Email! \nNot a Valid Email")
+    return false;
+  }
+}
+
+function validatePW(pw) {
+  var minNumberofChars = 6;
+  var maxNumberofChars = 16;
+  var regularExpression  = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+//  (?=.*[0-9]) - Assert a string has at least one number;
+//(?=.*[!@#$%^&*]) - Assert a string has at least one special character.
+
+
+  if(pw.length < minNumberofChars || pw.length > maxNumberofChars){
+    alert("Incorrect Password! \nPassword length must be between 6 and 16");
+    return false;
+  }
+  if(!regularExpression.test(pw)) {
+    alert("Incorrect Password! \nPassword should contain atleast one number and one special character");
+    return false;
+  }
+  return true
+}
+
+function validateCPW(cpw,pw) {
+
+if(cpw == pw)
+{
+  return true
+}
+else{
+  alert("Password Mismatch")
+  return false
+}
+return true
+}
+
+function validateFname(fn)
+{
+  var regex = /^[a-z ,.'-]+$/i
+
+  if(fn == "")
+  {
+    alert("Incorrect Firstname! \nFirstname Should not be empty")
+    return false;
+  }
+  if(!regex.test(fn))
+  {
+    alert("Incorrect Firstname! \nFirstname can only contain alphabets, comma, period, apostrophe, hyphen")
+    return false;
+  }
+  return true
+}
+function validateLname(ln)
+{
+  var regex = /^[a-z ,.'-]+$/i
+
+  if(ln == "")
+  {
+    alert("Incorrect Lastname! \nLastname Should not be empty")
+    return false;
+  }
+  if(!regex.test(ln))
+  {
+    alert("Incorrect Lastname! \nLastname can only contain alphabets, comma, period, apostrophe, hyphen")
+    return false;
+  }
+  return true
+}
+
+function validateUN(un)
+{
+  var regex = /^[a-z0-9_-]{3,16}$/igm
+
+  if(un == "")
+  {
+    alert("Incorrect Username! \nUsername Should not be empty")
+    return false;
+  }
+  if(!regex.test(un))
+  {
+    alert("Incorrect Username! \nUsername can only contain alphabets, Underscore, hyphen")
+    return false;
+  }
+  return true
+}
+function validateG(g)
+{
+  if(g=="Male"||  g=="male" || g=="Female" || g=="female" || g=="Other" || g=="other" ||g=="Others" || g=="others")
+    return true;
+  else if(g=="")
+  {
+    alert("Incorrect Gender! \nEmpty Gender")
+    return false;
+  }
+  else
+  {
+    alert("Incorrect Gender! \nNot a Valid Gender")
+    return false;
+  }
+}
+
+</script>
+
+<% include ../partials/footer %>

@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-dark  p-3 navbar-red">
+  <a href="/user/index"><img class="header-image" src="https://www.amrita.edu/sites/default/files/logo.png"></a>
+    <div class="container">
+       
+       <button class="navbar-toggler" style="margin-left: auto;" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+     
+       <div class="collapse navbar-collapse navbar-container" id="navbarSupportedContent">
+         <ul class="navbar-nav mr-3">
+
+          <li class="nav-item px-2">
+            <a class="nav-link" href="/user/1"><i class="fa fa-home"></i> Home</a>
+          </li>
+
+          <li class="nav-item px-2">
+             <a class="nav-link" href="/user/1/notes-new"><i class="fa fa-sticky-note-o"></i> Notes</a>
+           </li>
+           
+           </ul>
+           <%if(currentUser) { %>
+              <ul class="navbar-nav ml-auto">
+
+               <li class="nav-item dropdown mr-3">
+                 <a href="/user/1/profile" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                   <i class="fa fa-user"></i> Welcome <%=currentUser.username%>
+                 </a>
+                 <div class="dropdown-menu">
+                   <a href="/user/1/profile" class="dropdown-item">
+                     <i class="fa fa-user-circle"></i> Profile
+                   </a>
+       
+                   <a href="/auth/user-logout" class="dropdown-item">
+                     <i class="fa fa-user-times"></i> Logout
+                   </a>
+                 </div>
+               </li>
+               <!--
+               <li class="nav-item">
+                   <a href="/user/1/notification" class="nav-link">
+                       <i class="fa fa-bell"></i><span class="badge badge-danger badge-pill">2</span>
+                   </a>
+               </li>-->
+             </ul>
+           <% } %>
+          
+       </div>
+       
+   </div>
+ </nav>
+
+ 

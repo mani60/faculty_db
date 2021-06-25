@@ -1,0 +1,63 @@
+<% include ../partials/header %>
+
+<!--NAVIGATION BAR FOR USER-->
+<% include ../partials/userNav %>
+<% include ../partials/alerts %>
+<!--COURSES SECTION-->
+<header id="main-header" class="py-2 bg-light text-black">
+          <h1>Courses</h1>
+  </header>
+<!--ACTIONS-->
+<section id="actions" class="py-4 mb-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 mr-auto">
+            <a href="/user/1" class="btn btn-light btn-block">
+            <i class="fa fa-arrow-left"></i> Back to Dashboard
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="/classes/getall" class="btn btn-primary btn-block" data-toggle="modal" data-target="#changePasswordModal">
+            <i class="fa fa-key"></i> My classes
+          </a>
+        </div>
+        
+        <div class="col-md-3">
+          <a href="/user/1/courses/add" class="btn btn-success btn-block" data-toggle="modal" data-target="#changePasswordModal">
+            <i class="fa fa-key"></i> Create a course
+          </a>
+        </div>
+
+        <div class="col-md-3">
+          <a href="/user/1/courses/quizindex" class="btn btn-danger btn-block" data-toggle="modal" data-target="#changePasswordModal">
+            <i class="fa fa-key"></i> Quizzes
+          </a>
+        </div>
+        
+        <div class="col-md-3">
+          <a href="/user/1/courseInventory/all/all/1" class="btn btn-primary btn-block" data-toggle="modal" data-target="#updateProfileModal">
+            <i class="fa fa-refresh"></i> My Courses
+          </a>
+        </div>
+
+        <div class="col-md-3">
+          <a href="/courses/all/all/1" class="btn btn-success btn-block" data-toggle="modal" data-target="#updateProfileModal">
+            <i class="fa fa-refresh"></i> Browse Courses
+          </a>
+        </div>
+
+        <div class="col-md-3">
+          <a href="/user/1/classes/add/<%=currentUser._id%>" class="btn btn-danger btn-block" data-toggle="modal" data-target="#updateProfileModal">
+            <i class="fa fa-refresh"></i> Create Class
+          </a>
+        </div>
+        
+        
+        
+        
+  
+      </div>
+    </div>
+  </section>
+  
+  <% include ../partials/alerts %>
